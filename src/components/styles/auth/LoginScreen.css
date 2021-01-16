@@ -1,0 +1,77 @@
+.login-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+}
+
+.login-screen h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 23px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.logo-btn-google {
+  background-color: #d62d20;
+  border: none;
+  height: 45px;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  margin-bottom: 23px;
+  font-weight: 400;
+}
+
+form input {
+  height: 45px;
+  border: 1px solid #e3e3e3;
+  padding: 0 10px;
+  font-family: "Roboto Mono", monospace;
+  font-weight: 300;
+  outline: none;
+  margin-bottom: 23px;
+}
+
+.register-link {
+  font-size: 1.2rem;
+  color: #1bb76e;
+  margin-bottom: 23px;
+}
+
+.btn {
+  background-color: #1bb76e;
+  border: none;
+  height: 45px;
+  color: #fff;
+  font-family: "Roboto Mono", monospace;
+  margin-bottom: 0px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
+}
+
+.error {
+  background-color: #d62d20;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding: 10px 0px;
+  margin-bottom: 23px;
+}
+
+@media screen and (min-width: 768px) {
+  form {
+    width: 60%;
+  }
+}
