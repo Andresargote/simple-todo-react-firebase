@@ -1,5 +1,5 @@
 import React from 'react';
-import {useDispatch} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {useForm} from '../../hooks/useForm';
 import {startLoginEmailPassword, startGoogleLogin} from '../../actions/auth';
 import {Link} from 'react-router-dom';
@@ -8,6 +8,8 @@ import '../styles/auth/LoginScreen.css';
 
 export const LoginScreen = () => {
 
+    const {loading} = useSelector(state => state.ui);
+    console.log(loading);
     const dispatch = useDispatch();
 
     const [formValues, handleInputChange] = useForm({
@@ -38,7 +40,7 @@ export const LoginScreen = () => {
 
                 <Link className="register-link" to="/auth/register">Create new account</Link>
 
-                <input className="btn" type="submit" value="Login"/>
+                <input className="btn" type="submit" value="Login" disabled={loading}/>
             </form>
 
             
