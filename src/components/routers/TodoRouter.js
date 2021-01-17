@@ -14,7 +14,7 @@ import {PrivateRoute} from './PrivateRoute';
 
 import { TodoScreen } from '../TodoApp/TodoScreen';
 import { AuthRouter } from './AuthRouter';
-  
+import { LoadingGlobal } from '../LoadingGlobal';  
 
 export const TodoRouter = () => {
 
@@ -40,7 +40,7 @@ export const TodoRouter = () => {
 
     if(checking) {
         return (
-            <h1>Esperando...</h1>
+            <LoadingGlobal />
         )
     }
 
