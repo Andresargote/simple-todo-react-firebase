@@ -7,4 +7,10 @@ export const types = {
 
     uiStartLoading: "[UI] Start Loading",
     uiFinishLoading: "[UI] Finish Loading",
+
+    todosAddNew: "[Notes] New Todo",
+    todosActive: "[Notes] Set active todo",
+    todosLoad: "[Notes] Load todos",
+    todosDelete: "[Notes] Delete todo",
+    todosLogoutCleaning: "[Notes] Logout Cleaning",
 }
