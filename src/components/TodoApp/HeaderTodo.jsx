@@ -12,6 +12,10 @@ export const HeaderTodo = () => {
     const dispatch = useDispatch();
 
     const {name} = useSelector(state => state.auth);//aqui accedemos al store y buscamo el name del usuario
+    const {todos} = useSelector(state => state.todos);
+
+    console.log(todos);
+
     const {greeting} = useGreeting({});
 
     const handleLogout = () => {
@@ -23,6 +27,7 @@ export const HeaderTodo = () => {
             <div className="title">
                 <h3>{greeting}</h3>
                 <h1>{name}</h1>
+                <span>{(todos.length === 1) ? todos.length + " todo" : todos.length + " todos"}</span>
             </div>
             <button className="logout" onClick={handleLogout}>
                 Logout

@@ -9,6 +9,7 @@ import {
 
 import {firebase} from '../../firebase/firebaseConfig'; 
 import { login } from '../../actions/auth';
+import { startLoadingTodos } from '../../actions/todos';
 import {PublicRoute} from './PublicRoute';
 import {PrivateRoute} from './PrivateRoute';
 
@@ -29,6 +30,7 @@ export const TodoRouter = () => {
             if(user?.uid){
                 dispatch(login(user.uid, user.displayName));
                 setLoggedIn(true);
+                dispatch(startLoadingTodos(user.uid))
             }else {
                 setLoggedIn(false);
             }

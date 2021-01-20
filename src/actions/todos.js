@@ -2,6 +2,8 @@ import {db} from '../firebase/firebaseConfig';
 
 import {types} from '../types/types';
 
+import {loadTodos} from './../helpers/loadTodos';
+
 export const startNewTodo = () => {
     return async (dispatch, getState) => {
 
@@ -21,6 +23,13 @@ export const startNewTodo = () => {
 
 }
 
+export const startLoadingTodos = (uid) => {
+    return async (dispatch) => {
+        const todos = await loadTodos(uid);
+        dispatch(setTodos(todos));
+    }
+}
+
 export const activeTodo = (id, todo) => {
     return {
         type: types.todosActive,
@@ -28,5 +37,12 @@ export const activeTodo = (id, todo) => {
             id, 
             ...todo
         }
+    }
+}
+
+export const setTodos = (todos) => {
+    return {
+        type: types.todosLoad,
+        payload: todos
     }
 }

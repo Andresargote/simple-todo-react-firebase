@@ -15,6 +15,12 @@ export const todosReducers = (state = initialState, action) => {
                 }
             }
         
+        case types.todosLoad: 
+            return {
+                ...state,
+                todos: [...action.payload]
+            }
+        
         default:
             return state;
     }

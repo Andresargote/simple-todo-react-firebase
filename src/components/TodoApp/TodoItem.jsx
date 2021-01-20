@@ -2,7 +2,8 @@ import React from 'react';
 
 import '../styles/TodoItem.css';
 
-export const TodoItem = () => {
+export const TodoItem = ({id, titleTodo, completeTodo}) => {
+
     return (
         <li>
             <div className="list">
@@ -11,7 +12,8 @@ export const TodoItem = () => {
 	                    <input type="checkbox" />
 	                    <div className="b-input"></div>
                     </label>
-                    <span>Todo Task</span>
+                    <span>{titleTodo}</span>
+                    <span>HOla</span>
                 </div>
                 <span>X</span>
             </div>
